@@ -1,3 +1,27 @@
 // Place all the styles related to the index controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  color: white;
+  background-color: #182729;
+  font-family: 'Quattrocento Sans', sans-serif;
+  
+}
+
+.summoner-lookup {
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  left: 35%;
+  top: 45%;
+}
+
+.output {
+  display: none;
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  left: 45%;
+  top: 50%;
+}

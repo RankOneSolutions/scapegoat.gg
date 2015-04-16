@@ -5,3 +5,35 @@
 		<input type="text" id="summoner">
 	</form>
 </div>
+
+<div class="output">
+  <div id="summoner-1">
+    Name: <span id="summoner-1-name"></span>
+    <br>
+    ID: <span id="summoner-1-id"></span>
+  </div>
+</div>
+
+<script>
+  $('document').ready(function(){
+    $('.summoner-lookup').on('submit', function( e ) {
+      e.preventDefault();
+      var summoner_name  = $('#summoner').val();
+      var api_key = '817ef08a-68e8-445a-81b6-e6b313045e4e';
+      var url_base = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/";
+      var full_url = url_base + summoner_name + '?api_key=' + api_key;
+      
+      $.ajax({
+        url: full_url,
+        success: function(result){
+          var summoner_name = $('#summoner').val().toLowerCase();
+          var id = result[summoner_name].id
+          $('.output').show();
+          $('#summoner-1-name').text(summoner_name);
+          $('#summoner-1-id').text(id);
+        }
+      });
+
+    });
+  });
+  </script>
