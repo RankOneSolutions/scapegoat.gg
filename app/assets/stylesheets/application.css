@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	color: white;
+	background-color: #182729;
+	font-family: 'Quattrocento Sans', sans-serif;
+}
+
+.summoner-lookup {
+	position: absolute;
+	width: 30%;
+	height: 10%;
+	left: 35%;
+	top: 45%;
+}
+
